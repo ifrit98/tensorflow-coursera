@@ -1,0 +1,7 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+shakespeare_training_checkpoints/
+ckpt*
+checkpoint
