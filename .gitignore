@@ -5,3 +5,5 @@
 shakespeare_training_checkpoints/
 ckpt*
 checkpoint
+*.swp
+slurm*
