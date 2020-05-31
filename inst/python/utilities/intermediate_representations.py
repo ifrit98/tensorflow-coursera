@@ -1,3 +1,37 @@
+import os
+import zipfile
+import tensorflow as tf
+
+local_zip = '/tmp/cats_and_dogs_filtered.zip'
+
+zip_ref = zipfile.ZipFile(local_zip, 'r')
+
+zip_ref.extractall('/tmp')
+zip_ref.close()
+
+base_dir = '/tmp/cats_and_dogs_filtered'
+
+train_dir = os.path.join(base_dir, 'train')
+validation_dir = os.path.join(base_dir, 'validation')
+
+# Directory with our training cat/dog pictures
+train_cats_dir = os.path.join(train_dir, 'cats')
+train_dogs_dir = os.path.join(train_dir, 'dogs')
+
+# Directory with our validation cat/dog pictures
+validation_cats_dir = os.path.join(validation_dir, 'cats')
+validation_dogs_dir = os.path.join(validation_dir, 'dogs')
+
+train_cat_fnames = os.listdir( train_cats_dir )
+train_dog_fnames = os.listdir( train_dogs_dir )
+
+print(train_cat_fnames[:10])
+print(train_dog_fnames[:10])
+
+
+
+
+
 # Visualize Intermediate Representations
 import numpy as np
 import random
